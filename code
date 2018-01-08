@@ -1,9 +1,11 @@
 import turtle
+'''Setting up the screen'''
 screen = turtle.Screen()
 screen.bgcolor("blue")
 screen.title("Motion Set Distance Countinuous Template class version")
 screen.tracer(1)
 
+''' Creating the player class '''
 class Player(turtle.Turtle):
     def __init__(self):
         turtle.Turtle.__init__(self)
@@ -16,7 +18,7 @@ class Player(turtle.Turtle):
         self.speed = 3
         self.direction = "stop"
 
-
+   
     def move(self):
         if self.direction =="left":
             self.goto(self.xcor() -self.speed, self.ycor())
